@@ -1,329 +1,179 @@
-<<<<<<< HEAD
-# 🌍 Predicción del Gasto Turístico Internacional mediante Machine Learning
+# Tourism Spending Forecasting
 
-## 📌 Descripción del Proyecto
-
-Este proyecto ha sido desarrollado por un equipo de **4 analistas de datos** con el objetivo de analizar patrones de comportamiento de viajeros internacionales y construir un modelo predictivo capaz de estimar el **gasto total de un viaje** a partir de diferentes características relacionadas con el perfil del viajero, el destino y las condiciones del viaje.
-
-A través de técnicas de análisis de datos y Machine Learning, se ha realizado un proceso completo que incluye:
-
-- Limpieza y transformación de datos.
-- Análisis exploratorio (EDA).
-- Ingeniería de características.
-- Construcción y evaluación de modelos predictivos.
-- Optimización mediante validación cruzada.
-- Extracción de insights de negocio.
-
----
-
-## 🎯 Objetivos
-
-### Objetivo General
-
-Desarrollar un modelo de regresión capaz de predecir el gasto total de un viaje turístico utilizando información disponible antes de que el viaje se realice.
-
-### Objetivos Específicos
-
-✅ Preparar y transformar los datos para su análisis.
-
-✅ Analizar patrones de comportamiento turístico.
-
-✅ Identificar las variables con mayor impacto sobre el gasto.
-
-✅ Construir modelos predictivos robustos.
-
-✅ Evaluar el rendimiento mediante métricas de regresión.
-
-✅ Obtener conclusiones que ayuden a la toma de decisiones en el sector turístico.
-
----
-
-## 👥 Equipo de Trabajo
-
-Proyecto realizado por un equipo de **4 integrantes**, participando de forma colaborativa en las fases de:
-
-- Limpieza de datos
-- Análisis exploratorio
-- Visualización
-- Modelado predictivo
-- Evaluación de resultados
-- Documentación del proyecto
-
----
-
-# 📂 Dataset
-
-El proyecto utiliza dos conjuntos de datos principales.
-
-## 1️⃣ Dataset Original
-
-**Archivo:** `global_tourism_travel_trends.csv`
-
-Contiene información de aproximadamente **10.000 viajes internacionales**.
-
-### Variables incluidas
-
-#### 📅 Información temporal
-
-- Año
-- Mes
-- Estación del año
-
-#### 🌎 Información geográfica
-
-- País de origen
-- País de destino
-
-#### 👤 Perfil del viajero
-
-- Tipo de viajero
-- Número de viajeros
-- Motivo del viaje
-
-#### 💰 Información económica
-
-- Presupuesto por persona
-- Gasto total del viaje
-- Gasto diario en restaurantes
-
-#### ✈️ Información logística
-
-- Transporte
-- Alojamiento
-- Tipo de visado
-- Método de reserva
-- Antelación de reserva
-
-#### ⭐ Experiencia del viaje
-
-- Nivel de satisfacción
-- Seguridad percibida
-- Calidad del WiFi
-- Barrera idiomática
-- Recomendación del destino
-- Uso de redes sociales
-
-#### 🌱 Sostenibilidad
-
-- Huella de carbono
-- Decisiones ecológicas
-- Cumplimiento de medidas sanitarias
-
----
-
-## 2️⃣ Dataset Procesado
-
-**Archivo:** `dataset_viajes_procesado.csv`
-
-Dataset preparado para Machine Learning tras realizar:
-
-- Limpieza de datos
-- Tratamiento de valores nulos
-- Codificación de variables categóricas
-- Eliminación de variables irrelevantes
-- Preparación de variables predictoras
-
-### Características finales
-
-| Métrica | Valor |
-|----------|---------|
-| Registros | 10.000 |
-| Variables | 23 |
-| Tipo de problema | Regresión |
-
----
-
-# 🔧 Preparación de Datos
-
-## Limpieza de Datos
-
-Durante esta fase se realizaron:
-
-- Eliminación de registros duplicados.
-- Corrección de formatos.
-- Estandarización de variables categóricas.
-- Gestión de valores faltantes.
-
-### Variables con valores nulos tratados
-
-- `language_barrier`
-- `social_media_shared`
-- `health_safety_compliance`
-
----
-
-## Tratamiento de Outliers
-
-Se aplicó el método **IQR (Interquartile Range)** para detectar y analizar valores atípicos presentes en las variables numéricas.
-
----
-
-# 📊 Análisis Exploratorio (EDA)
-
-Durante la fase exploratoria se realizaron diferentes análisis para comprender mejor los datos.
-
-## Análisis realizados
-
-- Matriz de correlaciones.
-- Distribución de variables numéricas.
-- Análisis de asimetría y curtosis.
-- Destinos más visitados.
-- Métodos de reserva por tipo de viajero.
-- Relación entre presupuesto y gasto final.
-
----
-
-# 🎯 Variable Objetivo
-
-La variable utilizada para entrenar el modelo fue:
-
-```python
-total_trip_spend_usd
-```
-
-Representa el gasto total realizado por cada viajero durante su estancia.
-
----
-
-# 🧠 Selección de Características
-
-Las variables con mayor influencia sobre el gasto total fueron:
-
-- Budget per person
-- Trip duration
-- Daily restaurant spending
-- Traveler type
-- Travel purpose
-- Destination country
-
----
-
-# 🤖 Modelado Predictivo
-
-El flujo de Machine Learning seguido fue:
-
-```text
-Datos Limpios
-      ↓
-Train / Test Split
-      ↓
-Entrenamiento
-      ↓
-Evaluación
-      ↓
-Optimización
-      ↓
-Modelo Final
-```
-
----
-
-# 📈 Métricas de Evaluación
-
-Para evaluar el rendimiento de los modelos se utilizaron:
-
-| Métrica | Descripción |
-|----------|-------------|
-| MAE | Error Absoluto Medio |
-| MSE | Error Cuadrático Medio |
-| RMSE | Raíz del Error Cuadrático Medio |
-| R² | Capacidad explicativa del modelo |
-
----
-
-# ⚙️ Optimización
-
-Se utilizaron técnicas avanzadas para mejorar el rendimiento:
-
-### 🔄 K-Fold Cross Validation
-
-Permite validar la estabilidad del modelo utilizando múltiples particiones de los datos.
-
-### 🚀 Optuna
-
-Framework utilizado para la optimización automática de hiperparámetros.
-
----
-
-# 💾 Exportación del Modelo
-
-Una vez finalizado el entrenamiento, el modelo fue almacenado para su reutilización en futuros análisis y entornos productivos.
-
----
-
-# 📊 Principales Insights
-
-Tras el análisis realizado se concluye que:
-
-- El presupuesto inicial es uno de los factores más influyentes.
-- La duración del viaje impacta directamente sobre el gasto final.
-- El gasto diario en restauración presenta una fuerte relación con el gasto total.
-- Existen diferencias significativas según el tipo de viajero.
-- El destino elegido condiciona notablemente el comportamiento de gasto.
-
----
-
-# 🛠️ Tecnologías Utilizadas
+End-to-end Machine Learning project focused on forecasting tourism expenditure through regression modeling, business analytics, and interactive deployment with Streamlit.
 
 <p align="left">
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-
-<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white">
-
-<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white">
-
-<img src="https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white">
-
-<img src="https://img.shields.io/badge/Optuna-5C4EE5?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white">
-
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white">
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white">
+  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white">
+  <img src="https://img.shields.io/badge/Optuna-5C4EE5?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white">
+  <img src="https://img.shields.io/badge/Machine_Learning-102230?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Predictive_Analytics-005571?style=for-the-badge">
 </p>
 
 ---
 
-# 📁 Estructura del Proyecto
+## Live Demo
+
+🔗 **Streamlit Application:** [View Live Demo](https://your-streamlit-app.streamlit.app)
+
+---
+
+## Application Preview
+
+![Tourism Forecasting Dashboard](assets/dashboard_preview.png)
+
+---
+
+## Project Overview
+
+This collaborative project was developed by a team of four Data Analysts to explore international tourism patterns and build a predictive model capable of estimating total trip expenditure based on traveler, destination, and trip characteristics.
+
+The project covers the complete machine learning workflow:
+
+- Data cleaning and preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature engineering
+- Regression modeling
+- Hyperparameter optimization
+- Model evaluation
+- Business insights generation
+- Streamlit deployment
+
+---
+
+## Collaborative Project
+
+This project was developed collaboratively by a team of four members across all project stages.
+
+### Team Contributions
+
+- Data cleaning and preparation
+- Exploratory data analysis
+- Data visualization
+- Machine learning modeling
+- Model evaluation
+- Documentation and presentation
+
+---
+
+## Dataset
+
+### Original Dataset
+
+**File:** `global_tourism_travel_trends.csv`
+
+Contains information from approximately **10,000 international trips**, including traveler profiles, destinations, budgets, travel behavior, satisfaction metrics, and expenditure data.
+
+### Processed Dataset
+
+**File:** `dataset_viajes_procesado.csv`
+
+Prepared dataset for machine learning after:
+
+- Data cleaning
+- Missing value treatment
+- Categorical encoding
+- Feature selection
+- Dataset optimization
+
+| Metric | Value |
+|----------|---------|
+| Records | 10,000 |
+| Features | 23 |
+| Problem Type | Regression |
+
+---
+
+## Machine Learning Pipeline
 
 ```text
-📦 Tourism-Spending-Prediction
-│
-├── git
-│── .venv
-│── venv
-│── DA_Project_Regression_Grupo_4_final.ipynb
-├── dataset_viajes_procesado
-│── global_tourism_travel_trends
-│── modelo_metadata
-│── modelo_turismo
-└── README
-├── requirements
+Raw Data
+    ↓
+Data Cleaning
+    ↓
+Train / Test Split
+    ↓
+Model Training
+    ↓
+Evaluation
+    ↓
+Optimization
+    ↓
+Final Model
 ```
 
 ---
 
-# 🚀 Resultados
+## Evaluation Metrics
 
-El proyecto demuestra que es posible predecir el gasto turístico con un nivel de precisión adecuado utilizando variables disponibles antes del viaje.
+The following regression metrics were used:
 
-Los resultados obtenidos permiten identificar patrones de comportamiento y ofrecen información valiosa para:
-
-- Agencias de viaje.
-- Empresas turísticas.
-- Equipos de marketing.
-- Plataformas de reservas.
-- Organismos de promoción turística.
+| Metric | Description |
+|----------|-------------|
+| MAE | Mean Absolute Error |
+| MSE | Mean Squared Error |
+| RMSE | Root Mean Squared Error |
+| R² | Coefficient of Determination |
 
 ---
 
-# 📚 Conclusiones
+## Key Insights
 
-Este proyecto integra todas las fases fundamentales de un flujo de trabajo de Data Analytics y Machine Learning: desde la preparación de datos hasta la construcción y optimización de modelos predictivos.
+The analysis revealed several important drivers of tourism expenditure:
 
-Más allá de las métricas obtenidas, el principal valor reside en transformar datos turísticos en información útil para apoyar la toma de decisiones y comprender mejor los factores que influyen en el comportamiento de los viajeros.
-=======
-# Tourism_spending_forecasting
-# Tourism Spending Forecasting  End-to-end machine learning project focused on predicting tourist expenditure patterns using regression models and deploying interactive predictions through Streamlit.
->>>>>>> c498d3dcdcb6645b3c32022e077fc96cc4164b31
+- Initial travel budget is one of the strongest predictors.
+- Trip duration has a direct impact on total spending.
+- Daily restaurant expenses strongly correlate with final expenditure.
+- Spending behavior varies significantly across traveler profiles.
+- Destination choice substantially influences overall trip costs.
+
+---
+
+## Project Structure
+
+```text
+Tourism_spending_forecasting
+│
+├── assets/
+│   └── dashboard_preview.png
+│
+├── app.py
+├── DA_Project_Regression_Grupo_4_final.ipynb
+├── dataset_viajes_procesado.csv
+├── global_tourism_travel_trends.csv
+├── modelo_turismo.pkl
+├── modelo_metadata.json
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Results
+
+The project demonstrates that tourism expenditure can be predicted with a meaningful level of accuracy using information available before a trip takes place.
+
+The resulting model can support decision-making for:
+
+- Travel agencies
+- Tourism companies
+- Marketing teams
+- Booking platforms
+- Tourism promotion organizations
+
+---
+
+## Business Value
+
+This solution transforms tourism data into actionable insights and predictive capabilities that can support planning, segmentation, pricing strategies, and customer understanding within the tourism industry.
+
+---
+
+## Conclusion
+
+This project combines Data Analytics, Machine Learning, and deployment into a complete predictive solution.
+
+Beyond model performance, its primary value lies in transforming tourism data into actionable insights that help understand traveler behavior and support business decision-making.
