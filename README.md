@@ -135,18 +135,23 @@ The analysis revealed several important drivers of tourism expenditure:
 ## Project Structure
 
 ```text
-Tourism_spending_forecasting
+📦 Tourism_spending_forecasting
 │
 ├── assets/
 │   └── dashboard_preview.png
 │
+├── data/
+│   ├── dataset_viajes_procesado.csv
+│   └── global_tourism_travel_trends.csv
+│
+├── notebook/
+│   └── DA_Project_Regression_Grupo_4_final.ipynb
+│
 ├── app.py
-├── DA_Project_Regression_Grupo_4_final.ipynb
-├── dataset_viajes_procesado.csv
-├── global_tourism_travel_trends.csv
 ├── modelo_turismo.pkl
 ├── modelo_metadata.json
 ├── requirements.txt
+├── LICENSE
 └── README.md
 ```
 
