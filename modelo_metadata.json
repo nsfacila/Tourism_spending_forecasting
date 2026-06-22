@@ -1,0 +1,39 @@
+{
+    "features_esperadas": [
+        "duration_nights",
+        "budget_per_person_usd",
+        "restaurant_spend_per_day_usd",
+        "traveler_type_Business Traveler",
+        "traveler_type_Couple",
+        "traveler_type_Family",
+        "traveler_type_Group Tour",
+        "traveler_type_Solo",
+        "travel_purpose_Business",
+        "travel_purpose_Cultural Exchange",
+        "travel_purpose_Digital Nomad",
+        "travel_purpose_Education",
+        "travel_purpose_Family Visit",
+        "travel_purpose_Honeymoon",
+        "travel_purpose_Leisure/Tourism",
+        "travel_purpose_Medical Tourism",
+        "travel_purpose_Religious/Pilgrimage",
+        "destination_country_France",
+        "destination_country_Malaysia",
+        "destination_country_New Zealand",
+        "destination_country_Other",
+        "destination_country_Thailand"
+    ],
+    "mejores_hiperparametros": {
+        "n_estimators": 314,
+        "max_depth": 3,
+        "learning_rate": 0.014195750568549296,
+        "subsample": 0.6529005964847542,
+        "min_samples_split": 8
+    },
+    "metricas_finales": {
+        "R2_Train": 0.8999266833046298,
+        "R2_Test": 0.7941097359878255,
+        "MAE_USD": 3722.182975155225,
+        "RMSE_USD": 12142.932083436513
+    }
+}
