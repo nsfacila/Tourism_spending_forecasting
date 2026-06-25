@@ -17,7 +17,7 @@ End-to-end Machine Learning project focused on forecasting tourism expenditure t
 
 ## Live Demo
 
-🔗 **Streamlit Application:** [View Live Demo](https://your-streamlit-app.streamlit.app)
+🔗 **Streamlit Application:** [View Live Demo](https://nsfacila-tourism-spending-forecasting-app-nsf.streamlit.app/)
 
 ---
 
